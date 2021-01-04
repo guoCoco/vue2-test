@@ -1,18 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="images" v-viewer>
+       <img src="./assets/logo.png" alt="">
+      <img src="./assets/logo.png" alt="">
+    </div>
+    <viewer :images="images">
+      <img v-for="(src, i) in images" :src="src" :key="i">
+    </viewer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import imgSrc from './assets/logo.png'
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  data() {
+      return {
+        images: [imgSrc, imgSrc]
+      }
+    }
 }
 </script>
 
