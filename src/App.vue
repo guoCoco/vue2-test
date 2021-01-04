@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <h2>test docker</h2>
     <div class="images" v-viewer>
        <img src="./assets/logo.png" alt="">
       <img src="./assets/logo.png" alt="">
